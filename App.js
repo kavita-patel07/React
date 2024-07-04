@@ -1,20 +1,32 @@
-const parent= React.createElement("div",{id:"parent"}, [
-    React.createElement("div",{id:"child"}, [
-        React.createElement("h1",{},"I am an h1 tag"),
-        React.createElement("h2",{},"I am an h1 tag"),
-    ]),
-    React.createElement("div",{id:"child2"},[
-        React.createElement("h1",{},"I am an h1 tag"),
-        React.createElement("h2",{},"I am an h1 tag"),
-        ]),
-    ]);
+import logo from './logo.png';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Header from "./components/Header";
+import Body from './components/Body';
+import ReastaurantCard from './components/RestaurantCard';
 
+const currYear = new Date().getFullYear();
 
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <p>
+        Copyright &copy; {currYear}, Made with 💗 by <strong>Kavita</strong>
+      </p>
+    </footer>
+  );
+};
 
-// const heading=React.createElement("h1",
-// { id: "heading", xyz:"abc"},
-// "Hello World from React!"
-// );
-console.log(parent);
-const root=ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header logo={logo}/>
+      <Body />
+      <Footer />
+    </div>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<AppLayout />);

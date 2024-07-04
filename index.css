@@ -1,3 +1,141 @@
-#heading{
-    color:brown
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+.app {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.logo{
+    width: 100px;
+}
+
+.nav-items{
+    padding: 0px 20px;
+}
+
+.nav-items > ul{
+    font-size: 20px;
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-items > ul > li{
+    padding: 10px;
+    margin: 10px;
+}
+
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.res-card{  
+    margin:8px;
+    margin-right:10px;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    margin-bottom: 30px;
+    margin-right: 3.5px;
+    transition: transform 0.3s ease; 
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    gap: 10px;
+  }
+  
+  .search-container input {
+    min-width: 250px;
+    padding: 10px;
+  }
+  
+  .search-container input:focus {
+    outline: 0;
+  }
+  
+  .search-container button {
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
+  .res-card:hover {
+    cursor: pointer;
+    transform: scale(1.05); /* Increase size on hover */
+  }
+  
+
+.search{
+    padding: 10px;
+}
+
+.body {
+  padding: 20px;
+  font-family: monospace;
+  font-size: 11px;
+}
+
+.res-logo {
+  width: 190px;
+  height: 190px;
+  object-position: center;
+  object-fit:cover;/*Scale the image as large as possible while maintaining aspect ratio */
+  padding: 5px; /* Ensure the image fills the container vertically */
+  border-radius: 25px;
+
+}
+
+.footer {
+    padding: 20px 10px;
+    border: 1px solid black;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  h3, h4 {
+    margin: 5px 0;
+  }
+  
+  h3 {
+    font-size: 18px;
+    font-weight: 10px;
+    color: #333; 
+  }
+
+
+  h4 {
+    font-size: 13px;
+    color: #666;
+    font-weight: 80px;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  
+  }
+
+ .filter-btn{
+  padding: 8px;
+  cursor: pointer;;
+
+ }
+   
